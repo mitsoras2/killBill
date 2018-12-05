@@ -23,6 +23,8 @@ function addPin(personPin){
         color:'red'
     });
     map.entities.push(pin);
+    map.setView({center:coords,zoom:12});
+
 }
 
 function infoFor(deathListId){
@@ -64,7 +66,7 @@ $(function(){
                 table_lines+= "<tr class='"+rowClass+"'><td>"+deathlist[i].id+"</td>"+
                         "<td>"+deathlist[i].name+"</td>"+
                         "<td>"+deathlist[i].nickname+"</td>"+
-                        "<td><button"+deathlist[i].id+" class='btn btn-info' onclick=infoFor("+deathlist[i].id+")>Info</button></td></tr>";
+                        "<td><button class='btn btn-info' onclick=infoFor("+deathlist[i].id+")>Info</button></td></tr>";
                 
            }
             //Insert your code here!
